@@ -141,14 +141,14 @@ function spin() {
         if (getWinner() == "player") {
             computerH1[1].style.color = "white";
             playerScore++;
-            roundSound = new Audio("../audio/win sound.mp3");
+            roundSound = new Audio("/FE22-js2-mp1-Viktor-Johansson/audio/win sound.mp3");
             roundSound.volume = 0.1;
             roundSound.play();
             
         } else if (getWinner() == "computer") {
             computerH1[0].style.color = "white";
             computerH1[0].innerText = "Computer: " + winMsg[msgNbr];
-            roundSound = new Audio("../audio/game over.mp3");
+            roundSound = new Audio("/FE22-js2-mp1-Viktor-Johansson/audio/game over.mp3");
             roundSound.volume = 0.1;
             roundSound.play();
             computerScore++;
@@ -186,15 +186,15 @@ function winnerMessag() {
     roundSound.volume = 0.2;
     if (computerScore > playerScore) {
         title.innerText = "You Lose."
-        roundSound = new Audio("../audio/game over.mp3");
+        roundSound = new Audio("/FE22-js2-mp1-Viktor-Johansson/audio/game over.mp3");
         roundSound.play();
     } else if (computerScore == playerScore) {
         title.innerText = "Draw."
-        roundSound = new Audio("../audio/game over.mp3");
+        roundSound = new Audio("/FE22-js2-mp1-Viktor-Johansson/audio/game over.mp3");
         roundSound.play();
     } else {
         title.innerText = "You Win!"
-        roundSound = new Audio("../audio/win sound.mp3");
+        roundSound = new Audio("/FE22-js2-mp1-Viktor-Johansson/audio/win sound.mp3");
         roundSound.play();
     }
     title.style.width = "100%";
@@ -216,13 +216,13 @@ function spinChoices() {
         intervalID = setInterval(spinChoices, ((Math.random(100) * 100) + 100));
     }
 
-    computerImg[0].src = `../img/img${imgNr}.png`;
+    computerImg[0].src = `/FE22-js2-mp1-Viktor-Johansson/img/img${imgNr}.png`;
     let list = ["sten", "sax", "påse"];
     computer = list[imgNr];
     imgNr++;
     times++;
 
-    var snd = new Audio("../audio/spin.wav");
+    var snd = new Audio("/FE22-js2-mp1-Viktor-Johansson/audio/spin.wav");
     snd.volume = 0.07;
     snd.play();
 }
