@@ -1,0 +1,155 @@
+:root {
+    --bg-red-brown: linear-gradient(90deg, #5B85AA, #414770);
+    --bg-blue: radial-gradient(#5B85AA, #414770);
+    --bg-start-button: #f45f36;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+input,
+label {
+    color: white;
+}
+
+.name img {
+    width: 30rem;
+    padding: 0 5rem 0 5rem;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: var(--bg-blue);
+}
+
+body {
+    background: var(--bg-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+form button:hover {
+    filter: brightness(80%);
+    cursor: crosshair;
+}
+
+form button {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.7rem;
+    color: white;
+    background: var(--bg-start-button);
+}
+
+label,
+input {
+    width: 20rem;
+    margin: 1.4rem;
+}
+
+input {
+    text-align: center;
+    font-size: 1.5rem;
+    background: var(--bg-red-brown);
+    padding: 0.5rem;
+    border: white solid 1px;
+}
+
+/*game*/
+
+.game {
+    display: none;
+    background: var(--bg-blue);
+    width: 45rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.game h1 {
+    background-color: rgba(255, 255, 255, 0.308);
+    color: rgba(255, 255, 255, 0);
+}
+
+.score h1 {
+    visibility: hidden;
+}
+
+.computer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer h1 {
+    width: 100%;
+}
+
+.computer img {
+    width: 45rem;
+    height: 25vh;
+    padding: 0 16rem 0 16rem;
+    background-color: #414770;
+    background-size: contain;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.308);
+}
+
+.player-choices {
+    display: flex;
+}
+
+.hoverable img:hover {
+    cursor: crosshair;
+    padding: 2rem;
+}
+
+.score {
+    position: fixed;
+    left: 5%;
+    top: 15%;
+}
+
+.title {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40%;
+    bottom: 50%;
+    text-align: center;
+    font-size: 10rem;
+    height: 12rem;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+
+.player-choices img {
+    width: 15rem;
+    height: 10rem;
+    padding: 1rem;
+
+    background-color: #414770;
+    background-size: contain;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.308);
+}
